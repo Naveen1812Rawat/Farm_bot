@@ -1,0 +1,17 @@
+MYROBOT:
+     joint_state_controller:
+          type: joint_state_controller/JointStateController
+          publish_rate: 20
+
+     l_con_position_controller:
+          type: effort_controllers/JointGroupEffortController
+          joints: ['wheel_left_front', 'wheel_left_rear']
+          pid: {p: 1.0, i: 0.0, d: 0.0}
+          
+     r_con_position_controller:
+          type: effort_controllers/JointGroupEffortController
+          joints: ['wheel_right_front', 'wheel_right_rear']
+          pid: {p: 1.0, i: 0.0,d: 0.0}
+          
+    
+               
